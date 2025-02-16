@@ -9,9 +9,9 @@ console.log(3
 console.log("pankaj");
 
 
-let name = "pankaj"
-let age = 18
-let isloggedIn = false
+let name = "pankaj" //string
+let age = 18 // number 2^53 range
+let isloggedIn = false // boolean
 let state;
 
 // number => 2 to power 53
@@ -20,9 +20,12 @@ let state;
 // boolean => true/false
 // null => standalone value
 // undefined =>
-// symbol => unique
+// symbol => uniqueness
 
 //object
-
+//non primitive
+/*
+Check data type-> console.log(typeof x)
+*/
 console.log(typeof undefined); //udefined
 console.log(typeof null); //object
