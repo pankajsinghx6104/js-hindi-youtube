@@ -1,6 +1,6 @@
 "use strict"; // treat all js code as newer version
 
-//alert( 3 + 3 ) // we are using node js not browser
+//alert( 3 + 3 ) // we are using node js not browser.
 
 console.log(3 
 
@@ -18,14 +18,14 @@ let state;
 // bigint
 // string => ""
 // boolean => true/false
-// null => standalone value
-// undefined =>
+// null => standalone value // let state = null
+// undefined => //let state; value is not defined
 // symbol => uniqueness
 
 //object
 //non primitive
 /*
-Check data type-> console.log(typeof x)
+Check data type-> console.log(typeof x);
 */
 console.log(typeof undefined); //udefined
 console.log(typeof null); //object
