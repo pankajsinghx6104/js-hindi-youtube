@@ -11,7 +11,7 @@
  
  let userOne = {
      email: "user@google.com",
-     upi: "user@ybl"
+     upi: "user@ybl" 
  }
  
  let userTwo = userOne //refere
@@ -20,4 +20,5 @@
  
  console.log(userOne.email);//hitesh@google.com
  console.log(userTwo.email);//hitesh@google.com
+ 
  
