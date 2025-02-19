@@ -64,3 +64,6 @@ The split() method is used to divide a string into an array of substrings based 
 */
 
 
+const str = "5";
+console.log(str.padStart(7, "3")); // '3333335'
+console.log(str.padEnd(4, "0")); // '5000'
