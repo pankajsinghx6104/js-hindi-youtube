@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Javascript </h1>
+    <button id = "start">Start</button>
+    <button id = "stop">Stop</button>
+
+<script>
+    const myName = setInterval(function(){
+        console.log("Pankaj", Date.now());
+    }, 1000); // This will run every 1000 milliseconds (1 second)
+    clearInterval(myName); // This will stop the setInterval function from executing
+
+    // const sayDate = function(str) {
+    //     console.log(str, Date.now());    
+    // };
+
+  //const intervalId = setInterval(sayDate, 1000,"Now This World shall Know Pain - PAIN - the leader of Akatsuki");
+
+  //  clearInterval(intervalId); // This will stop the sayDate function from executing
+let intervalStart;
+document.querySelector("#start").addEventListener("click", function() {
+       intervalStart = setInterval(function(){
+        console.log("Javascript is Litttt", Date.now());
+    }, 1000);
+    console.log("STARTED");
+       });
+
+
+document.querySelector("#stop").addEventListener("click", function() {
+        clearInterval(intervalStart);
+        console.log("STOPPED");
+    });
+
+</script>
+
+</body>
+</html>
