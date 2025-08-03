@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Followers</title>
+</head>
+<body style="background-color: #212121; color: white; font-family: Arial, sans-serif;">
+    <h1>GitHub API Fetch (XHR)</h1>
+    <button id="getData">Get Data</button>
+    <div id="data" style="margin-top: 20px; font-size: 1.2rem;"></div>
+
+    <script>
+        document.querySelector("#getData").addEventListener("click", function () {
+            const requestURL = 'https://api.github.com/users/hiteshchoudhary';
+            const xhr = new XMLHttpRequest();
+
+            xhr.open("GET", requestURL);
+
+            xhr.onreadystatechange = function () {
+                // Logs readyState for debugging (0 to 4)
+                console.log("ReadyState:", xhr.readyState);
+
+                if (xhr.readyState === 4) {
+                    // Parsing JSON response
+                    const data = JSON.parse(this.responseText);
+
+                    // Logging in console
+                    console.log("Data type:", typeof data);
+                    console.log("Followers:", data.followers);
+
+                    // Showing result in <div>
+                    const outputDiv = document.getElementById("data");
+                    outputDiv.innerHTML = `
+                        <p><strong>Name:</strong> ${data.name}</p>
+                        <p><strong>Followers:</strong> ${data.followers}</p>
+                        <p><strong>Public Repos:</strong> ${data.public_repos}</p>
+                        <img src="${data.avatar_url}" alt="Avatar" width="100">
+                    `;
+                }
+            };
+
+            xhr.send();
+        });
+    </script>
+</body>
+</html>
